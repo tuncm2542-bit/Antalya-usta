@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dünyanın her yerinde güvenilir hizmet verenleri bulun.">
-  <title>UstaGlobal | Dünyanın Ustaları Burada</title>
+  <meta name="description" content="AntalyaUsta - Antalya'da güvenilir ustaları ve hizmet verenleri bul.">
+  <title>AntalyaUsta | Aradığın Usta Antalya'da Burada</title>
 
   <style>
     * {
@@ -13,57 +13,252 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7f8;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
       color: #1f2937;
+      line-height: 1.6;
     }
 
     header {
-      background: #0b7a53;
-      color: white;
-      padding: 18px 6%;
+      background: #ffffff;
+      padding: 16px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .logo {
       font-size: 27px;
-      font-weight: bold;
+      font-weight: 800;
+      color: #1261a0;
+    }
+
+    .logo span {
+      color: #ff7a00;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      margin-left: 18px;
-      font-weight: bold;
+      color: #374151;
+      margin-left: 16px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #1261a0;
     }
 
     .hero {
-      background: linear-gradient(135deg, #0b7a53, #13a36f);
-      color: white;
+      min-height: 520px;
+      padding: 90px 6%;
       text-align: center;
-      padding: 75px 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(rgba(0,65,120,.82), rgba(0,65,120,.78)),
+        linear-gradient(135deg, #1261a0, #14a3c7);
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
 
     .hero p {
-      font-size: 19px;
+      font-size: 20px;
+      max-width: 700px;
       margin-bottom: 30px;
     }
 
     .search-box {
+      width: min(900px, 100%);
       background: white;
-      max-width: 900px;
-      margin: auto;
-      padding: 15px;
+      padding: 12px;
       border-radius: 14px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    }
+
+    .search-box input,
+    .search-box select {
+      padding: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 16px;
+      width: 100%;
+      background: white;
+    }
+
+    button, .btn {
+      border: 0;
+      border-radius: 9px;
+      padding: 15px 22px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #ff7a00;
+      color: white;
+    }
+
+    .primary:hover {
+      background: #e96f00;
+    }
+
+    section {
+      padding: 65px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #123b5d;
+      margin-bottom: 8px;
+    }
+
+    .categories {
+      background: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .category {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 25px 15px;
+      text-align: center;
+      transition: .2s;
+    }
+
+    .category:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    }
+
+    .category .icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      font-size: 17px;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,.06);
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1261a0;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .providers {
+      background: white;
+    }
+
+    .provider-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 22px;
+      background: #fff;
+      box-shadow: 0 5px 16px rgba(0,0,0,.05);
+    }
+
+    .card h3 {
+      color: #123b5d;
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #4b5563;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f5ed;
+      color: #08783e;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 8px 0 14px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .call {
+      background: #1261a0;
+      color: white;
+      flex: 1;
+      text-align: center;
+    }
+
+    .whatsapp {
+      background: #16a34a;
+      color: white
