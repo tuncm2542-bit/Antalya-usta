@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AntalyaUsta — Aradığın usta, Antalya'da burada.</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#12355b;background:#fff}
+a{text-decoration:none;color:inherit}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:#fff}
+.logo{font-size:28px;font-weight:800;color:#1265c0}.logo span{color:#ff7b00}.tag{display:block;font-size:11px;color:#4f7092;font-weight:600;margin-top:2px}
+.menu{display:flex;gap:28px;font-size:14px}.actions{display:flex;gap:10px}.btn{border:1px solid #1680e8;padding:12px 18px;border-radius:10px;background:#fff;color:#1265c0;font-weight:700}.btn.orange{background:#ff7b00;color:#fff;border-color:#ff7b00}
+.hero{padding:72px 7% 90px;background:linear-gradient(120deg,#0b65bd,#1e91df);color:#fff;text-align:left}
+.hero h1{font-size:48px;max-width:650px;margin:0 0 15px;line-height:1.05}.hero h1 b{color:#ff9800}.hero p{font-size:18px;max-width:650px;line-height:1.5}
+.search{margin-top:34px;background:#fff;padding:10px;border-radius:16px;display:flex;gap:10px;max-width:1000px}.search input,.search select{flex:1;border:0;padding:16px;font-size:15px;outline:0}.search button{border:0;border-radius:11px;background:#ff7b00;color:#fff;padding:0 28px;font-weight:800;font-size:15px}
+.section{padding:55px 7%}.section h2{font-size:30px;margin:0 0 8px}.muted{color:#67809c}.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:28px}.cat{padding:25px 10px;text-align:center;border-radius:18px;background:#f5f9fd}.icon{font-size:35px}.cat strong{display:block;margin-top:12px}.how{background:#f2f8fd;border-radius:22px;padding:35px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}.step{text-align:center}.num{margin:auto;background:#1265c0;color:#fff;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800}.providers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}.card{border:1px solid #e2ebf3;border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 5px 18px #0d477d12}.photo{height:150px;background:linear-gradient(135deg,#d8eafa,#8fc3ee);display:grid;place-items:center;font-size:55px}.cardbody{padding:16px}.stars{color:#f39a00;margin:8px 0}.small{font-size:13px;color:#66809b}.cardbuttons{display:flex;gap:8px;margin-top:14px}.wa,.call{flex:1;padding:10px;border-radius:8px;text-align:center;font-weight:700;font-size:13px}.wa{background:#20b65a;color:#fff}.call{border:1px solid #167bd7;color:#1265c0}.banners{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.banner{padding:28px;border-radius:16px;background:#083b75;color:#fff}.banner.orange{background:#ff7b00}.footer{margin-top:40px;background:#062b55;color:#fff;padding:40px 7%;display:flex;justify-content:space-between;gap:20px}.footer a{margin-left:20px;color:#dbeaff}
+@media(max-width:800px){.menu{display:none}.hero h1{font-size:38px}.search{flex-direction:column}.search button{height:52px}.cats{grid-template-columns:repeat(2,1fr)}.providers{grid-template-columns:1fr 1fr}.how,.banners{grid-template-columns:1fr}.footer{display:block}.footer a{display:inline-block;margin:12px 12px 0 0}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="logo">🔧 Antalya<span>Usta</span><span class="tag">Aradığın usta, Antalya'da burada.</span></div>
+  <nav class="menu"><a href="#">Ana Sayfa</a><a href="#hizmetler">Hizmetler</a><a href="#ustalar">Ustalar</a><a href="#hakkimizda">Hakkımızda</a><a href="#iletisim">İletişim</a></nav>
+  <div class="actions"><button class="btn">Giriş Yap</button><button class="btn orange">Üye Ol</button></div>
+</header>
+
+<section class="hero">
+<h1>Antalya'da <b>güvenilir</b> hizmeti bul</h1>
+<p>İhtiyacın olan hizmeti ve bulunduğun ilçeyi seç, bölgenizdeki ustalara kolayca ulaş.</p>
+<div class="search">
+<input id="service" placeholder="Hangi hizmeti arıyorsun?">
+<select id="district"><option>İlçe seç</option><option>Muratpaşa</option><option>Kepez</option><option>Konyaaltı</option><option>Döşemealtı</option><option>Alanya</option></select>
+<button onclick="searchService()">🔎 USTA BUL</button>
+</div>
+</section>
+
+<section class="section" id="hizmetler">
+<h2>Popüler Hizmetler</h2><div class="muted">Antalya'da en çok aranan hizmet kategorileri</div>
+<div class="cats">
+<div class="cat"><div class="icon">🔧</div><strong>Tesisatçı</strong><span class="small">Su, doğalgaz, tesisat</span></div>
+<div class="cat"><div class="icon">❄️</div><strong>Klima Servisi</strong><span class="small">Satış, bakım, onarım</span></div>
+<div class="cat"><div class="icon">⚡</div><strong>Elektrikçi</strong><span class="small">Arıza, tesisat, montaj</span></div>
+<div class="cat"><div class="icon">🧹</div><strong>Temizlik</strong><span class="small">Ev, ofis, inşaat</span></div>
+<div class="cat"><div class="icon">🚚</div><strong>Nakliyat</strong><span class="small">Evden eve, şehir içi</span></div>
+<div class="cat"><div class="icon">🎨</div><strong>Boya & Badana</strong><span class="small">İç ve dış cephe</span></div>
+<div class="cat"><div class="icon">🔑</div><strong>Çilingir</strong><span class="small">Kapı, kasa, oto</span></div>
+<div class="cat"><div class="icon">🌳</div><strong>Bahçe Bakımı</strong><span class="small">Peyzaj, budama</span></div>
+<div class="cat"><div class="icon">🛠️</div><strong>Marangoz</strong><span class="small">Mobilya, tadilat</span></div>
+<div class="cat"><div class="icon">•••</div><strong>Tüm Hizmetler</strong><span class="small">Daha fazla kategori</span></div>
+</div>
+</section>
+
+<section class="section" id="hakkimizda">
+<h2>Nasıl Çalışır?</h2><div class="muted">3 adımda ihtiyacın olan ustaya ulaş.</div>
+<div class="how">
+<div class="step"><div class="num">1</div><h3>Hizmeti seç</h3><div class="muted">İhtiyacın olan hizmeti ve ilçeyi seç.</div></div>
+<div class="step"><div class="num">2</div><h3>Ustaları karşılaştır</h3><div class="muted">Profil, hizmet alanı ve yorumları incele.</div></div>
+<div class="step"><div class="num">3</div><h3>Ustayla iletişime geç</h3><div class="muted">Telefon veya WhatsApp üzerinden ulaş.</div></div>
+</div>
+</section>
+
+<section class="section" id="ustalar">
+<h2>Öne Çıkan Ustalar</h2><div class="muted">Örnek profiller — gerçek işletmeler yayına alınmadan önce doğrulanacaktır.</div>
+<div class="providers">
+<div class="card"><div class="photo">🔧</div><div class="cardbody"><strong>Mehmet Tesisat</strong><div class="small">Tesisatçı · Muratpaşa</div><div class="stars">★ 4.9 <span class="small">(128 yorum)</span></div><div class="cardbuttons"><div class="wa">WhatsApp</div><div class="call">Ara</div></div></div></div>
+<div class="card"><div class="photo">❄️</div><div class="cardbody"><strong>Antalya Klima Servisi</strong><div class="small">Klima Servisi · Kepez</div><div class="stars">★ 4.8 <span class="small">(96 yorum)</span></div><div class="cardbuttons"><div class="wa">WhatsApp</div><div class="call">Ara</div></div></div></div>
+<div class="card"><div class="photo">⚡</div><div class="cardbody"><strong>Yılmaz Elektrik</strong><div class="small">Elektrikçi · Konyaaltı</div><div class="stars">★ 4.9 <span class="small">(104 yorum)</span></div><div class="cardbuttons"><div class="wa">WhatsApp</div><div class="call">Ara</div></div></div></div>
+<div class="card"><div class="photo">🧹</div><div class="cardbody"><strong>Temiz Ev Antalya</strong><div class="small">Temizlik · Muratpaşa</div><div class="stars">★ 4.7 <span class="small">(78 yorum)</span></div><div class="cardbuttons"><div class="wa">WhatsApp</div><div class="call">Ara</div></div></div></div>
+</div>
+<div class="banners">
+<div class="banner orange"><h2>Usta mısın?</h2><p>AntalyaUsta'da yerini al, işlerini büyüt.</p><button class="btn">Hemen Üye Ol →</button></div>
+<div class="banner"><h2>Antalya'nın ilçelerinde hizmet</h2><p>Muratpaşa, Kepez, Konyaaltı, Döşemealtı, Alanya ve daha fazlası.</p></div>
+</div>
+</section>
+
+<footer class="footer" id="iletisim"><div><strong style="font-size:24px">🔧 AntalyaUsta</strong><div class="tag" style="color:#dbeaff">Aradığın usta, Antalya'da burada.</div></div><div><a href="#">Ana Sayfa</a><a href="#hizmetler">Hizmetler</a><a href="#ustalar">Ustalar</a><a href="#iletisim">İletişim</a></div></footer>
+<script>
+function searchService(){
+ const s=document.getElementById('service').value.trim(), d=document.getElementById('district').value;
+ if(!s && d==='İlçe seç'){alert('Lütfen bir hizmet veya ilçe seç.');return}
+ document.getElementById('ustalar').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body></html>
